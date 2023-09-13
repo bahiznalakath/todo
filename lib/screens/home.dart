@@ -16,8 +16,6 @@ class _HomeState extends State<Home> {
   final todosList = ToDo.todoList();
   List<ToDo> _foundToDo = [];
   final _todoController = TextEditingController();
-  final DateTime _selectedDate = DateTime.now();
-  final TimeOfDay _selectedTime = TimeOfDay.now();
   bool _isButtonDisabled = false;
 
   @override
