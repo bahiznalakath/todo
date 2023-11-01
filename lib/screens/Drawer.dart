@@ -35,6 +35,7 @@ class DrawerPage extends StatelessWidget {
             leading: const Icon(Icons.info),
             title: const Text('About'), // Add the "About" item
             onTap: () {
+              showAboutSnackbar(context);
               Navigator.of(context);
             },
           ),
@@ -42,9 +43,9 @@ class DrawerPage extends StatelessWidget {
             leading: const Icon(Icons.person),
             title: const Text('Profile'),
             onTap: () {
-              // Handle Profile item tap
+
               Navigator.pop(context);
-              // Close the drawer
+
             },
           ),
 
@@ -64,4 +65,13 @@ class DrawerPage extends StatelessWidget {
       ),
     );
   }
+  void showAboutSnackbar(BuildContext context) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text('Our ToDo App is a versatile task management tool designed to help you stay organized and productive. With features like task prioritization, due date setting, and reminders, you can easily manage your daily responsibilities. It also offers task categorization, subtasks, and collaboration options, making it suitable for both personal and team use. Whether you need to track work projects or plan your daily life, our ToDo App provides the flexibility and functionality you need to get things done efficiently.'),
+        duration: Duration(seconds: 3), // Adjust the duration as needed
+      ),
+    );
+  }
 }
+
