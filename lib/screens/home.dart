@@ -97,7 +97,6 @@ class _HomeState extends State<Home> {
                   child: TextField(
                     onChanged: (text) {
                       setState(() {
-                        // Enable or disable the button based on whether the text is empty
                         _isButtonDisabled = text.isEmpty;
                       });
                     },
@@ -162,31 +161,19 @@ class _HomeState extends State<Home> {
   //   _todoController.clear();
   // }
   void _addToDoItem(String toDo) async {
-    DateTime? pickedDate = await showDatePicker(
-      context: context,
-      initialDate: DateTime.now(),
-      firstDate: DateTime.now(),
-      lastDate: DateTime(DateTime.now().year + 1),
-    );
+    DateTime currentDate = DateTime.now();
+    TimeOfDay currentTime = TimeOfDay.now();
 
-    if (pickedDate != null) {
-      TimeOfDay? pickedTime = await showTimePicker(
-        context: context,
-        initialTime: TimeOfDay.now(),
-      );
+    setState(() {
+      todosList.add(ToDo(
+        id: DateTime.now().toString(),
+        todoText: toDo,
+        dueDate: currentDate,
+        dueTime: currentTime,
+      ));
+    });
 
-      if (pickedTime != null) {
-        setState(() {
-          todosList.add(ToDo(
-            id: DateTime.now().millisecondsSinceEpoch.toString(),
-            todoText: toDo,
-            dueDate: pickedDate,
-            dueTime: pickedTime,
-          ));
-        });
-        _todoController.clear();
-      }
-    }
+    _todoController.clear();
   }
 
   void _runFilter(String enteredKeyword) {

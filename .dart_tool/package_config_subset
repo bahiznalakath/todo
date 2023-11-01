@@ -82,10 +82,6 @@ web
 3.1
 file:///C:/Users/BAHIZ/AppData/Local/Pub/Cache/hosted/pub.dev/web-0.1.4-beta/
 file:///C:/Users/BAHIZ/AppData/Local/Pub/Cache/hosted/pub.dev/web-0.1.4-beta/lib/
-flutter_todo_app
-2.17
-file:///C:/Users/BAHIZ/Desktop/New%20folder/flutter-todo-app/
-file:///C:/Users/BAHIZ/Desktop/New%20folder/flutter-todo-app/lib/
 sky_engine
 3.0
 file:///C:/flutter/bin/cache/pkg/sky_engine/
@@ -98,4 +94,8 @@ flutter_test
 3.0
 file:///C:/flutter/packages/flutter_test/
 file:///C:/flutter/packages/flutter_test/lib/
+flutter_todo_app
+2.17
+file:///D:/New%20folder/flutter-todo-app/
+file:///D:/New%20folder/flutter-todo-app/lib/
 2
